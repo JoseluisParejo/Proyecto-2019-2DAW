@@ -91,8 +91,9 @@
               <table class="table table-bordered" id="tabla-color">
                 <thead>
                   <tr>
-                    <th>fecha_reserva</th>
+                    <th>Fecha de reserva</th>
                     <th>Correo</th>
+                    <th>Precio Final</th>
                     <th>Valoracion</th>
                   </tr>
                 </thead>
@@ -106,6 +107,7 @@
                   <tr>
                     <td><?php echo $row['fecha_reserva']; ?></td>
                     <td><?php echo $row['usuario_correo']; ?></td>
+                    <td><?php echo $row['precio_final']; ?></td>
                     <td><input type="submit" class="btn-success btn-block" data-toggle="modal" data-target="#opiniones" value="Opina"></td>
                     <td><a href="cuentaDelRes.php?id_reserva=<?php echo $row['id_reserva']?>" class="btn-danger" onclick="return confirm('¿Seguro que quiere borrar la reserva?')">
                         <i class="far fa-trash-alt"></i>
