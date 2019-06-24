@@ -89,7 +89,7 @@ session_start();
         }
         $difDia = dateDifferent($entrada_reserva, $salida_reserva);
         //estas serian las operaciones matematicas para calcular el precio final de la reserva 
-        $precioDIA = ($precio_reserva + $precioPension) * $ocup_reserva;
+        $precioDIA = $precio_reserva + ($precioPension * $ocup_reserva);
         $precioFinal = $precioDIA * $difDia;
         $fechaHOY = date('Y-m-d');
         $user = $_SESSION['user'];
